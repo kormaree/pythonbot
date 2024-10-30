@@ -1,0 +1,12 @@
+services:
+  pythontelegrambottemplate:
+    #image: ghcr.io/<ваш профиль гит хаб>/<назввание репозитория>
+    image: pythontelegrambottemplate
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped
