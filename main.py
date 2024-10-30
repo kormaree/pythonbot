@@ -24,7 +24,7 @@ async def post_init(application: Application) -> None:
 def main() -> None:
     """Запуск бота"""   
     # создаем приложение 
-    token = os.getenv("TELEGRAM_BOT_TOKEN")  # Убедитесь, что эта переменная окружения установлена
+    token = os.getenv("BOT_TOKEN")  # Убедитесь, что эта переменная окружения установлена
     application = Application.builder().token(token).post_init(post_init).build()
 
     # добавляем обработчики
